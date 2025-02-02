@@ -1,0 +1,39 @@
+@use '@picocss/pico/scss/pico';
+
+body {
+    font-family: Figtree, sans;
+}
+
+header,
+main,
+footer {
+    @extend .container;
+}
+
+footer {
+    text-align: center;
+}
+
+form {
+    @extend article;
+
+    margin: 0 auto;
+    max-width: 768px;
+    min-width: 400px;
+    width: 50vw;
+}
+
+a[role=button] {
+    @extend button;
+}
+
+.error {
+    @extend article;
+
+    background-color: #ff9999;
+    border: solid 1px #ff3333;
+
+    p {
+        margin: 0;
+    }
+}
