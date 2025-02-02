@@ -10,6 +10,12 @@ class Post extends Model
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'content',
+        'slug',
+        'title',
+    ];
+
     public function topics()
     {
         return $this->belongsToMany(Topic::class);
